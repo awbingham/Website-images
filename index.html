@@ -119,5 +119,82 @@
     </div>
 </div>
 
+<div class="enlarged-image">
+    <div class="navigation-arrow left-arrow">&lt;</div>
+    <div class="navigation-arrow right-arrow">&gt;</div>
+    <div class="slideshow-controls">
+        <button class="slideshow-start">Start Slideshow</button>
+        <button class="slideshow-stop">Stop Slideshow</button>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        const enlargedImage = document.querySelector('.enlarged-image');
+        const leftArrow = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+        const slideshowStartBtn = document.querySelector('.slideshow-start');
+        const slideshowStopBtn = document.querySelector('.slideshow-stop');
+        let currentIndex = 0;
+        let slideshowInterval;
+
+        // Function to handle image navigation
+        function navigate(direction) {
+            currentIndex = (currentIndex + direction + galleryItems.length) % galleryItems.length;
+            showEnlargedImage(currentIndex);
+        }
+
+        // Function to fetch images from the "images" folder
+        function fetchImages() {
+            // Code to fetch images
+        }
+
+        // Function to show enlarged image
+        function showEnlargedImage(index) {
+            // Code to show enlarged image
+        }
+
+        // Click event listener on images to show the enlarged image when clicked
+        // Code to add event listener
+
+        // Click event listener on enlarged image to close it when clicked
+        // Code to add event listener
+
+        // Keyboard event listener for arrow keys
+        document.addEventListener('keydown', (event) => {
+            if (enlargedImage.classList.contains('show')) {
+                if (event.key === 'ArrowLeft') {
+                    navigate(-1);
+                } else if (event.key === 'ArrowRight') {
+                    navigate(1);
+                }
+            }
+        });
+
+        // Click event listener on left arrow for navigation
+        leftArrow.addEventListener('click', () => {
+            navigate(-1);
+        });
+
+        // Click event listener on right arrow for navigation
+        rightArrow.addEventListener('click', () => {
+            navigate(1);
+        });
+
+        // Click event listener on start slideshow button
+        slideshowStartBtn.addEventListener('click', () => {
+            slideshowInterval = setInterval(() => {
+                navigate(1);
+            }, 3000); // Change 3000 to the desired interval in milliseconds
+        });
+
+        // Click event listener on stop slideshow button
+        slideshowStopBtn.addEventListener('click', () => {
+            clearInterval(slideshowInterval);
+        });
+    });
+</script>
+
 </body>
 </html>
