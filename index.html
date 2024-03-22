@@ -122,10 +122,7 @@
 <div class="enlarged-image">
     <div class="navigation-arrow left-arrow">&lt;</div>
     <div class="navigation-arrow right-arrow">&gt;</div>
-    <div class="slideshow-controls">
-        <button class="slideshow-start">Start Slideshow</button>
-        <button class="slideshow-stop">Stop Slideshow</button>
-    </div>
+    <button id="slideshow-btn">Slideshow</button>
 </div>
 
 <script>
@@ -134,8 +131,7 @@
         const enlargedImage = document.querySelector('.enlarged-image');
         const leftArrow = document.querySelector('.left-arrow');
         const rightArrow = document.querySelector('.right-arrow');
-        const slideshowStartBtn = document.querySelector('.slideshow-start');
-        const slideshowStopBtn = document.querySelector('.slideshow-stop');
+        const slideshowBtn = document.getElementById('slideshow-btn');
         let currentIndex = 0;
         let slideshowInterval;
 
@@ -143,6 +139,18 @@
         function navigate(direction) {
             currentIndex = (currentIndex + direction + galleryItems.length) % galleryItems.length;
             showEnlargedImage(currentIndex);
+        }
+
+        // Function to start the slideshow
+        function startSlideshow() {
+            slideshowInterval = setInterval(() => {
+                navigate(1); // Navigate to the next image
+            }, 45000); // Change this value to adjust the interval time (45 seconds)
+        }
+
+        // Function to stop the slideshow
+        function stopSlideshow() {
+            clearInterval(slideshowInterval);
         }
 
         // Function to fetch images from the "images" folder
@@ -161,17 +169,6 @@
         // Click event listener on enlarged image to close it when clicked
         // Code to add event listener
 
-        // Keyboard event listener for arrow keys
-        document.addEventListener('keydown', (event) => {
-            if (enlargedImage.classList.contains('show')) {
-                if (event.key === 'ArrowLeft') {
-                    navigate(-1);
-                } else if (event.key === 'ArrowRight') {
-                    navigate(1);
-                }
-            }
-        });
-
         // Click event listener on left arrow for navigation
         leftArrow.addEventListener('click', () => {
             navigate(-1);
@@ -182,16 +179,17 @@
             navigate(1);
         });
 
-        // Click event listener on start slideshow button
-        slideshowStartBtn.addEventListener('click', () => {
-            slideshowInterval = setInterval(() => {
-                navigate(1);
-            }, 3000); // Change 3000 to the desired interval in milliseconds
-        });
-
-        // Click event listener on stop slideshow button
-        slideshowStopBtn.addEventListener('click', () => {
-            clearInterval(slideshowInterval);
+        // Click event listener on slideshow button
+        slideshowBtn.addEventListener('click', () => {
+            if (slideshowInterval) {
+                // If slideshow is already running, stop it
+                stopSlideshow();
+                slideshowBtn.textContent = 'Slideshow';
+            } else {
+                // If slideshow is not running, start it
+                startSlideshow();
+                slideshowBtn.textContent = 'Stop Slideshow';
+            }
         });
     });
 </script>
