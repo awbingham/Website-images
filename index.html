@@ -5,482 +5,390 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
     <link rel="stylesheet" href="styles/styles.css"/>
-    <style>
-        /* Gallery styles */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .gallery-item {
-            margin: 10px;
-            cursor: pointer;
-        }
-
-        .gallery-item img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-        }
-
-        /* Enlarge image styles */
-        .enlarged-image {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            z-index: 100;
-        }
-
-        .enlarged-image img {
-            max-width: 90vw;
-            max-height: 90vh;
-        }
-
-        .navigation-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-            color: white;
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        .left-arrow {
-            left: 10px;
-        }
-
-        .right-arrow {
-            right: 10px;
-        }
-
-        /* Hide radio buttons */
-        input[type="radio"] {
-            display: none;
-        }
-
-        /* Button to start slideshow */
-        #slideshow-btn {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px;
-            background-color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* CSS for radio buttons to show enlarged image */
-        input[type="radio"]:checked + .enlarged-image {
-            display: block;
-        }
-        
-        /* Styles for the image slider navigation */
-        .enlarged-image img {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        input[type="radio"]:nth-child(1):checked ~ .enlarged-image img {
-            transform: translateX(0%);
-        }
-
-        input[type="radio"]:nth-child(2):checked ~ .enlarged-image img {
-            transform: translateX(-100%);
-        }
-
-        input[type="radio"]:nth-child(3):checked ~ .enlarged-image img {
-            transform: translateX(-200%);
-        }
-    </style>
 </head>
 <body>
 
 <div class="gallery">
     <div class="gallery-item">
-        <img src="images/image (1).jpg" alt="Image 1">
+        <img src="images/image (1).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (2).jpg" alt="Image 1">
+        <img src="images/image (2).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (3).jpg" alt="Image 1">
+        <img src="images/image (3).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (4).jpg" alt="Image 1">
+        <img src="images/image (4).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (5).jpg" alt="Image 1">
+        <img src="images/image (5).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (6).jpg" alt="Image 1">
+        <img src="images/image (6).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (7).jpg" alt="Image 1">
+        <img src="images/image (7).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (8).jpg" alt="Image 1">
+        <img src="images/image (8).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (9).jpg" alt="Image 1">
+        <img src="images/image (9).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (10).jpg" alt="Image 1">
+        <img src="images/image (10).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (11).jpg" alt="Image 1">
+        <img src="images/image (11).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (12).jpg" alt="Image 1">
+        <img src="images/image (12).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (13).jpg" alt="Image 1">
+        <img src="images/image (13).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (14).jpg" alt="Image 1">
+        <img src="images/image (14).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (15).jpg" alt="Image 1">
+        <img src="images/image (15).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (16).jpg" alt="Image 1">
+        <img src="images/image (16).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (17).jpg" alt="Image 1">
+        <img src="images/image (17).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (18).jpg" alt="Image 1">
+        <img src="images/image (18).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (19).jpg" alt="Image 1">
+        <img src="images/image (19).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (20).jpg" alt="Image 1">
+        <img src="images/image (20).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (21).jpg" alt="Image 1">
+        <img src="images/image (21).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (22).jpg" alt="Image 1">
+        <img src="images/image (22).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (23).jpg" alt="Image 1">
+        <img src="images/image (23).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (24).jpg" alt="Image 1">
+        <img src="images/image (24).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (25).jpg" alt="Image 1">
+        <img src="images/image (25).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (26).jpg" alt="Image 1">
+        <img src="images/image (26).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (27).jpg" alt="Image 1">
+        <img src="images/image (27).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (28).jpg" alt="Image 1">
+        <img src="images/image (28).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (29).jpg" alt="Image 1">
+        <img src="images/image (29).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (30).jpg" alt="Image 1">
+        <img src="images/image (30).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (31).jpg" alt="Image 1">
+        <img src="images/image (31).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (32).jpg" alt="Image 1">
+        <img src="images/image (32).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (33).jpg" alt="Image 1">
+        <img src="images/image (33).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (34).jpg" alt="Image 1">
+        <img src="images/image (34).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (35).jpg" alt="Image 1">
+        <img src="images/image (35).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (36).jpg" alt="Image 1">
+        <img src="images/image (36).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (37).jpg" alt="Image 1">
+        <img src="images/image (37).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (38).jpg" alt="Image 1">
+        <img src="images/image (38).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (39).jpg" alt="Image 1">
+        <img src="images/image (39).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (40).jpg" alt="Image 1">
+        <img src="images/image (40).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (41).jpg" alt="Image 1">
+        <img src="images/image (41).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (42).jpg" alt="Image 1">
+        <img src="images/image (42).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (43).jpg" alt="Image 1">
+        <img src="images/image (43).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (44).jpg" alt="Image 1">
+        <img src="images/image (44).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (45).jpg" alt="Image 1">
+        <img src="images/image (45).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (46).jpg" alt="Image 1">
+        <img src="images/image (46).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (47).jpg" alt="Image 1">
+        <img src="images/image (47).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (48).jpg" alt="Image 1">
+        <img src="images/image (48).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (49).jpg" alt="Image 1">
+        <img src="images/image (49).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (50).jpg" alt="Image 1">
+        <img src="images/image (50).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (51).jpg" alt="Image 1">
+        <img src="images/image (51).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (52).jpg" alt="Image 1">
+        <img src="images/image (52).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (53).jpg" alt="Image 1">
+        <img src="images/image (53).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (54).jpg" alt="Image 1">
+        <img src="images/image (54).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (55).jpg" alt="Image 1">
+        <img src="images/image (55).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (56).jpg" alt="Image 1">
+        <img src="images/image (56).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (57).jpg" alt="Image 1">
+        <img src="images/image (57).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (58).jpg" alt="Image 1">
+        <img src="images/image (58).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (59).jpg" alt="Image 1">
+        <img src="images/image (59).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (60).jpg" alt="Image 1">
+        <img src="images/image (60).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (61).jpg" alt="Image 1">
+        <img src="images/image (61).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (62).jpg" alt="Image 1">
+        <img src="images/image (62).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (63).jpg" alt="Image 1">
+        <img src="images/image (63).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (64).jpg" alt="Image 1">
+        <img src="images/image (64).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (65).jpg" alt="Image 1">
+        <img src="images/image (65).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (66).jpg" alt="Image 1">
+        <img src="images/image (66).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (67).jpg" alt="Image 1">
+        <img src="images/image (67).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (68).jpg" alt="Image 1">
+        <img src="images/image (68).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (69).jpg" alt="Image 1">
+        <img src="images/image (69).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (70).jpg" alt="Image 1">
+        <img src="images/image (70).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (71).jpg" alt="Image 1">
+        <img src="images/image (71).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (72).jpg" alt="Image 1">
+        <img src="images/image (72).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (73).jpg" alt="Image 1">
+        <img src="images/image (73).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (74).jpg" alt="Image 1">
+        <img src="images/image (74).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (75).jpg" alt="Image 1">
+        <img src="images/image (75).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (76).jpg" alt="Image 1">
+        <img src="images/image (76).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (77).jpg" alt="Image 1">
+        <img src="images/image (77).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (78).jpg" alt="Image 1">
+        <img src="images/image (78).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (79).jpg" alt="Image 1">
+        <img src="images/image (79).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (80).jpg" alt="Image 1">
+        <img src="images/image (80).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (81).jpg" alt="Image 1">
+        <img src="images/image (81).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (82).jpg" alt="Image 1">
+        <img src="images/image (82).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (83).jpg" alt="Image 1">
+        <img src="images/image (83).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (84).jpg" alt="Image 1">
+        <img src="images/image (84).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (85).jpg" alt="Image 1">
+        <img src="images/image (85).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (86).jpg" alt="Image 1">
+        <img src="images/image (86).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (87).jpg" alt="Image 1">
+        <img src="images/image (87).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (88).jpg" alt="Image 1">
+        <img src="images/image (88).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (89).jpg" alt="Image 1">
+        <img src="images/image (89).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (90).jpg" alt="Image 1">
+        <img src="images/image (90).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (91).jpg" alt="Image 1">
+        <img src="images/image (91).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (92).jpg" alt="Image 1">
+        <img src="images/image (92).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (93).jpg" alt="Image 1">
+        <img src="images/image (93).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (94).jpg" alt="Image 1">
+        <img src="images/image (94).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (95).jpg" alt="Image 1">
+        <img src="images/image (95).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (96).jpg" alt="Image 1">
+        <img src="images/image (96).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (97).jpg" alt="Image 1">
+        <img src="images/image (97).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (98).jpg" alt="Image 1">
+        <img src="images/image (98).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (99).jpg" alt="Image 1">
+        <img src="images/image (99).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (100).jpg" alt="Image 1">
+        <img src="images/image (100).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (101).jpg" alt="Image 1">
+        <img src="images/image (101).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (102).jpg" alt="Image 1">
+        <img src="images/image (102).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (103).jpg" alt="Image 1">
+        <img src="images/image (103).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (104).jpg" alt="Image 1">
+        <img src="images/image (104).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (105).jpg" alt="Image 1">
+        <img src="images/image (105).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (106).jpg" alt="Image 1">
+        <img src="images/image (106).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (107).jpg" alt="Image 1">
+        <img src="images/image (107).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (108).jpg" alt="Image 1">
+        <img src="images/image (108).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (109).jpg" alt="Image 1">
+        <img src="images/image (109).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (110).jpg" alt="Image 1">
+        <img src="images/image (110).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (111).jpg" alt="Image 1">
+        <img src="images/image (111).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (112).jpg" alt="Image 1">
+        <img src="images/image (112).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (113).jpg" alt="Image 1">
+        <img src="images/image (113).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (114).jpg" alt="Image 1">
+        <img src="images/image (114).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (115).jpg" alt="Image 1">
+        <img src="images/image (115).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (116).jpg" alt="Image 1">
+        <img src="images/image (116).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (117).jpg" alt="Image 1">
+        <img src="images/image (117).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (118).jpg" alt="Image 1">
+        <img src="images/image (118).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (119).jpg" alt="Image 1">
+        <img src="images/image (119).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (120).jpg" alt="Image 1">
+        <img src="images/image (120).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (121).jpg" alt="Image 1">
+        <img src="images/image (121).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (122).jpg" alt="Image 1">
+        <img src="images/image (122).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (123).jpg" alt="Image 1">
+        <img src="images/image (123).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (124).jpg" alt="Image 1">
+        <img src="images/image (124).jpg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (1).jpeg" alt="Image 1">
+        <img src="images/image (1).jpeg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (2).jpeg" alt="Image 1">
+        <img src="images/image (2).jpeg" alt="Image 1" tabindex="0">
     </div>
     <div class="gallery-item">
-        <img src="images/image (1).png" alt="Image 1">
+        <img src="images/image (1).png" alt="Image 1" tabindex="0">
     </div>
 </div>
 
