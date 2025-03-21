@@ -45,5 +45,5 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     outline: none; /* Remove the default focus outline */
-    z-index: 10; /* Ensure it appears on top of other content */
+    z-index: 10; /* Ensure it appearsx on top of other content */
 }
